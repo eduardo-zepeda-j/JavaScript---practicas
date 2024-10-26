@@ -66,18 +66,17 @@ const poema =
 console.log(poema);
 
 const poema2 =
-  'las rosas son rijas,\n\
+  "las rosas son rijas,\n\
 las violetas son azules,\n\
 el azucar es dulce,\n\
 caracter inesperado,\n\
-en la linea 86';
+en la linea 86";
 console.log(poema2);
-const poema3 =
-  `las rosas son rijas,
+const poema3 = `las rosas son rijas,
 las violetas son azules,
 el azucar es dulce,
 caracter inesperado,
-en la linea 86`
+en la linea 86`;
 
-
-//
+//prueba 2
+//esto es una prueba de push
