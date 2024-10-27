@@ -77,6 +77,3 @@ las violetas son azules,
 el azucar es dulce,
 caracter inesperado,
 en la linea 86`;
-
-//prueba 2
-//esto es una prueba de push
