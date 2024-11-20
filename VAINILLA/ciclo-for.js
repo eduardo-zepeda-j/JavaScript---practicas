@@ -60,5 +60,5 @@ for (fruta in listaDeCompras) {
 }
 console.log("-".repeat(10));
 for (fruta in listaDeCompras) {
-  console.log(`${fruta}: ${listaDeCompras[fruta]}`);
+  console.log(`${fruta} : ${listaDeCompras[fruta]}`);
 }
