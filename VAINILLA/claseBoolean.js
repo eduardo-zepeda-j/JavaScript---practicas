@@ -12,3 +12,4 @@ console.log(!!name);
 const value = 0;
 const explicitBoolean = Boolean(value);
 console.log(explicitBoolean);
+
