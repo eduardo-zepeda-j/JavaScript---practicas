@@ -15,7 +15,7 @@ objeto {
 
 */
 
-const persona = {
+const persona1 = {
   nombre: "Juan",
   edad: 30,
   direccion: {
@@ -24,8 +24,8 @@ const persona = {
   },
   // Metodo
   saludar() {
-    console.log(`Hola, mi nombre es ${persona.nombre}`);
+    console.log(`Hola, mi nombre es ${persona1.nombre}`);
   },
 };
 
-persona.saludar();
+persona1.saludar();

@@ -12,10 +12,10 @@ function Persona(nombre, apellido, edad) {
   this.nombreCompleto = `${this.nombre} ${this.apellido}`;
 }
 
-const persona = new Persona("Juan", "Perez", 33);
-console.log(persona);
+const persona1 = new Persona("Juan", "Perez", 33);
+console.log(persona1);
 
-console.log(persona.nombreCompleto);
+console.log(persona1.nombreCompleto);
 
 const persona2 = new Persona("Carlos", "Morales", 35);
 console.log(persona2);
@@ -25,8 +25,8 @@ console.log(persona2.nombreCompleto);
 Persona.prototype.telefono = "12345678";
 
 console.log(persona2);
-persona.nacionalidad = "Guatemalteco";
-console.log(persona);
+persona1.nacionalidad = "Guatemalteco";
+console.log(persona1);
 
 Persona.prototype.saludar = function () {
   console.log(
@@ -34,5 +34,5 @@ Persona.prototype.saludar = function () {
   );
 };
 
-persona.saludar();
+persona1.saludar();
 persona2.saludar();
