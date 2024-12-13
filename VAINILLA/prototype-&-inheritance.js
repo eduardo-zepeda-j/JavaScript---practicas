@@ -20,10 +20,31 @@ class Perro extends Animal {
   emitirSonido() {
     console.log("Guauu Guauu");
   }
+  correr() {
+    console.log(`${this.nombre} corre alegremente`);
+  }
 }
 
-const perro = new Perro("Firulais", "Mamifero", "Pitbull");
-perro.emitirSonido();
-console.log(perro.nombre);
-console.log(perro.tipo);
-console.log(perro.raza);
+const perro1 = new Perro("Firulais", "Mamifero", "Pitbull");
+
+console.log(perro1.nombre);
+console.log(perro1.tipo);
+console.log(perro1.raza);
+perro1.emitirSonido();
+perro1.correr();
+
+perro1.nuevoMetodo = function () {
+  console.log("Este es un nuevo metodo");
+};
+
+Perro.prototype.segundoMetodo = function () {
+  console.log("Este es un segundo metodo");
+};
+
+perro1.segundoMetodo();
+
+
+let currentPrototype=Object.getPrototypeOf(Perro.prototype);
+for (; currentPrototype !== null; currentPrototype = Object.getPrototypeOf(currentPrototype)) {
+  console.log(currentPrototype);
+}
