@@ -1,6 +1,5 @@
 function Titulo() {
-  //jsx -> React.createElement
-  const nombre = "Chanchito Feliz";
+  const nombre = "Prueba";
   if (nombre) {
     return <h1>Hola {nombre}</h1>;
   }

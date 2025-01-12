@@ -1,34 +1,14 @@
 import Card, { CardBody } from "./components/Card";
 import List from "./components/List";
 
-/**
- * esto es en TS y JS
- * truthy: cualquier valor que no sea falsy
- * falsy: false, 0, "", null, undefined, NaN
- */
-
 function App() {
-  const list: string[] = ["Goku", "Vegeta", "Piccolo", "Gohan", "Trunks"];
-  const handleSelect = (elemento: string) => {
-    console.log("Imprimiendo", elemento);
-  };
-
-  /**
-   * 
-   
-  * const contenido = list.length !== 0 && (
-    <List data={list} onSelect={handleSelect} />
-  );
-  */
+  // jsx -> React.createElement('p', null, 'Hola Mundo');
+  const list = ["Goku", "Vegeta", "Trunks", "Gohan"];
 
   return (
     <Card>
-      <CardBody title="Hola Mundo" text="Este es el texto" />
-      {list.length !== 0 ? (
-        <List data={list} onSelect={handleSelect} />
-      ) : (
-        "No hay contenido"
-      )}
+      <CardBody title="Hola Mundo" text="Esto es una prueba" />
+      <List data={list} />
     </Card>
   );
 }
