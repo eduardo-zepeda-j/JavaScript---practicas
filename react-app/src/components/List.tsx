@@ -1,20 +1,23 @@
-import { useState } from "react";
+import { useState, ReactNode } from "react";
 
 type Props = {
   data: string[];
+  onSelect?: (elemento: string) => void;
 };
 
-function List({ data }: Props) {
+
+function List({ data, onSelect }: Props) {
   const [varIndex, setVarIndex] = useState(-1);
-  const handleClick = (index: number, elemento: string) => {
+  const handleClick = (elemento: string, index: number) => {
     setVarIndex(index);
-    console.log(`${index + 1} - ${elemento}`);
+    onSelect?.(elemento);
+    //console.log(`${index + 1} - ${elemento}`);
   };
   return (
     <ul className="list-group">
       {data.map((elemento, index) => (
         <li
-          onClick={() => handleClick(index, elemento)}
+          onClick={() => handleClick(elemento, index)}
           key={elemento}
           className={`list-group-item ${varIndex == index ? "active" : ""}`}
         >
