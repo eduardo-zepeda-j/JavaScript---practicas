@@ -1,0 +1,11 @@
+.button {
+  background-color: red;
+  color: white;
+  border-radius: 1.2rem;
+  margin: 0.6rem;
+  border: none;
+}
+
+.padded {
+  padding: 25px 30px;
+}
