@@ -1,7 +1,9 @@
 import Card, { CardBody } from "./components/Card";
 import List from "./components/List";
 import Button from "./components/Button";
+import Alert from "./components/Alert";
 import { useState } from "react";
+import { HiAnnotation } from "react-icons/hi";
 
 /**
  * Truthy -> Cualquier valor que no sea falsy
@@ -43,6 +45,11 @@ function App() {
   const delMinion = () => {
     setData(data.slice(0, data.length - 1));
   };
+  const [status, setStatus] = useState(true);
+  const toggleStatus = () => setStatus(!status);
+
+  const [sent, setSent] = useState(false);
+  const handleClick = () => setSent(!sent);
   return (
     <Card>
       <Button isLoading={true} onClick={addMinion}>
@@ -52,6 +59,13 @@ function App() {
         Eliminar
       </Button>
       <List data={data}></List>
+      <Alert status={status} onClick={toggleStatus}>
+        Alert
+      </Alert>
+
+      <Button sent={sent} onClick={handleClick}>
+        Enviar
+      </Button>
     </Card>
   );
 }

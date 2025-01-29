@@ -1,11 +1,20 @@
 .button {
-  background-color: red;
+  transition: 0.5s;
   color: white;
   border-radius: 1.2rem;
   margin: 0.6rem;
   border: none;
+  cursor: pointer;
 }
 
 .padded {
   padding: 25px 30px;
+}
+
+.btnPrimary {
+  background-color: rgb(143, 111, 231);
+}
+
+.btnPrimary:hover {
+  background-color: rgb(214, 170, 170);
 }
